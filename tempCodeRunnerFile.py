@@ -1,1 +1,1 @@
-print(name[3])
+acma;lsc,l
