@@ -1,14 +1,13 @@
-import math
+num = int(input("Enter the number of names you want to input: "))
 
-x = 227
-is_prime = True
+name_list = []  # Initialize an empty list to store the names
 
-for i in range(2, math.isqrt(x) + 1):
-    if x % i == 0:
-        is_prime = False
-        break
+for j in range(num):
+    name = input("\nEnter name: ")
+    name_list.append(name)  # Append each name to the list
 
-if is_prime:
-    print("227 is a prime number.")
-else:
-    print("227 is not a prime number.")
+    if name == "shambu":
+        print("Good")
+
+    for i in name:
+        print(i)
