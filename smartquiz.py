@@ -41,7 +41,7 @@ def print_quiz(questions):
             print("you are incorrect")
    for i in range(8): 
       if i== score :
-         print(prize[i-1])      
+         print("you have won ",prize[i-1],"Rupees")      
 questions = [
     ("What is the capital of France?", ["London", "Paris", "Berlin", "Madrid"], 2),
     ("Which planet is known as the Red Planet?", ["Mars", "Jupiter", "Venus", "Saturn"], 1),
