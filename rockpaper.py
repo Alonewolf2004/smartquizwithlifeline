@@ -3,10 +3,13 @@ round=int(input("how many rounds you want to play ?"))
 score=0
 for i in range(round):
    user_input=input(" press 'r' for rock,'p' for paper,'s' for scissor:")
-   elements=["r","p","s"]
-   comp=random.choice(elements)
-   print(comp)
-   
+   if user_input =="r" or user_input =="p" or user_input =="s" :
+
+    elements=["r","p","s"]
+    comp=random.choice(elements)
+   else: 
+    print("invalid input")
+    break
    if user_input==comp:   
     print("draw")
    elif user_input=="r" and comp=="p" or comp=="s":   
@@ -25,3 +28,4 @@ if score>=round:
  print("you won with a score of  score",score)       
 else:
     print("you lost with a score of  score",score)       
+   
