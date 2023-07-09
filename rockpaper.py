@@ -11,19 +11,33 @@ for i in range(round):
     print("invalid input")
     break
    if user_input==comp:   
+    print("comp chose",comp)
     print("draw")
-   elif user_input=="r" and comp=="p" or comp=="s":   
+   elif user_input=="r" and comp=="p" :   
+       print("comp chose",comp)
        print("comp won ")
 
-   elif user_input=="p" and comp=="r" or comp=="s":
+   elif user_input=="p" and comp=="s":
+       print("comp chose",comp)
        print("comp won ")
 
-   elif user_input=="s" and comp=="p" or comp=="r":
+   elif user_input=="s" and  comp=="r":
+    print("comp chose",comp)
     print("comp won ")
     
-   else:
-       print("you won")
-       score+=1        
+   elif user_input=="p" and comp=="r" :   
+    print("comp chose",comp)
+    print("you won ")
+    score+=1
+   elif user_input=="s" and comp=="p":
+       print("comp chose",comp)
+       print("you won ")
+       score+=1
+   elif user_input=="r" and  comp=="s":
+    print("comp chose",comp)
+    print("you won ")
+    score+=1
+         
 if score>=round:              
  print("you won with a score of  score",score)       
 else:
