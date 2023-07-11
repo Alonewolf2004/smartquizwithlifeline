@@ -1,8 +1,8 @@
 import random
-round=int(input("how many rounds you want to play ?"))
+rounds=int(input("how many rounds you want to play ? :"))
 score=0
-for i in range(round):
-   user_input=input(" press 'r' for rock,'p' for paper,'s' for scissor:")
+for i in range(rounds):
+   user_input=input(" press 'r' for rock,'p' for paper,'s' for scissor\n your choice : ")
    if user_input =="r" or user_input =="p" or user_input =="s" :
 
     elements=["r","p","s"]
@@ -11,35 +11,19 @@ for i in range(round):
     print("invalid input")
     break
    if user_input==comp:   
-    print("comp chose",comp)
+    print("comp chose :",comp)
     print("draw")
-   elif user_input=="r" and comp=="p" :   
-       print("comp chose",comp)
+   elif (user_input=="r" and comp=="p") or (user_input=="p" and comp=="s") or (user_input=="s" and  comp=="r") :   
+       print("comp chose :",comp)
        print("comp won ")
-
-   elif user_input=="p" and comp=="s":
-       print("comp chose",comp)
-       print("comp won ")
-
-   elif user_input=="s" and  comp=="r":
-    print("comp chose",comp)
-    print("comp won ")
     
-   elif user_input=="p" and comp=="r" :   
-    print("comp chose",comp)
+   else:   
+    print("comp chose :",comp)
     print("you won ")
     score+=1
-   elif user_input=="s" and comp=="p":
-       print("comp chose",comp)
-       print("you won ")
-       score+=1
-   elif user_input=="r" and  comp=="s":
-    print("comp chose",comp)
-    print("you won ")
-    score+=1
-         
-if score>=round:              
- print("you won with a score of  score",score)       
+if (score==rounds/2):              
+ print("Its a Draw with a score of ",score) 
+elif (score>=rounds/2):
+  print("you won with a score of ",score)
 else:
-    print("you lost with a score of  score",score)       
-   
+    print("you lost with a score of  score",score)     
