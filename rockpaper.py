@@ -26,4 +26,4 @@ if (score==rounds/2):
 elif (score>=rounds/2):
   print("you won with a score of ",score)
 else:
-    print("you lost with a score of  score",score)     
+    print("you lost with a score of  score",score)
